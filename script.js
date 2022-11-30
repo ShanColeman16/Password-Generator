@@ -18,26 +18,30 @@ function generatePassword() {
   var numbers = "0123456789";
   var specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   var characterLength = 128;
-
+  var chooseFrom = ""
 
   if (Uppercase) {
     // Use Uppercase letters
     console.log('Uppercase')
+    chooseFrom += Uppercase;
   }
 
   if (Lowercase) {
     // Use Lowercase letters
     console.log('Lowercase')
+    chooseFrom += Lowercase;
   }
 
   if (numbers) {
     // Use numbers letters
     console.log('numbers')
+    chooseFrom += numbers;
   }
 
   if (specialChar) {
     // Use specialChar letters
     console.log('specialChar')
+    chooseFrom += specialChar;
   }
   
 for (var i = 0; i <= 128; i++) {
