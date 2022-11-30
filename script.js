@@ -4,7 +4,10 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   console.log ("Hey you did it")
  
-  // User will choose the be asked for password
+  // User will be prompted for password criteria
+  //User prompted for length of password
+  //User asked for character types to include in password
+
   var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   var numbers = "0123456789";
   var letters = "abcdefghijklmnop";
@@ -15,8 +18,17 @@ function generatePassword() {
 
 
 
+
+
+//User answers all prompts password is generated and displayed
+
+
   return "password";
 }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 
 // Write password to the #password input
 function writePassword() {
@@ -27,5 +39,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
