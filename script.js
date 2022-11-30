@@ -12,6 +12,13 @@ function generatePassword() {
   var numbers = "0123456789";
   var letters = "abcdefghijklmnop";
   var Uppercase = letters.toUpperCase();
+  
+  
+for (var i = 0; i <= 128; i++) {
+  console.log ("This is the current value of i: " + i + ".");
+
+
+}
 
 
 
