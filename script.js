@@ -5,7 +5,10 @@ function generatePassword() {
   console.log ("Hey you did it")
  
   // User will choose the be asked for password
-
+  var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  var numbers = "0123456789";
+  var letters = "abcdefghijklmnop";
+  var Uppercase = letters.toUpperCase();
 
 
 
