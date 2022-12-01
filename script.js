@@ -6,11 +6,11 @@ function generatePassword() {
   var numbers = "0123456789";
   var letters = "abcdefghijklmnop";
   var Uppercase = letters.toUpperCase();
-  var characterLength = 128;
+  var characterLength = 0;
   var chooseFrom = "";
 
   // YOUR CODE GOES HERE
-  var passwordlength = prompt("How many characters would you like your password to include?");
+  var characterLength = prompt("How many characters would you like to include in your password?" );
   var isUppercase = confirm("Would you like to use uppercase?");
   var isLowercase = confirm("Would you like to use uppercase?");
   var isSpecial = confirm("Would you like to use a special character?");
@@ -43,15 +43,16 @@ function generatePassword() {
      chooseFrom += numbers;
     
   }
-if (passwordlength < 8) {
-  prompt("Password needs to be at least 8 characters long")
+if (characterLength < 8) {
+  prompt("Password needs to be at least 8 characters long");
   
-} else (passwordlength > 128); {
-  prompt("Password needs to be no longer than 128 characters")
+} else if (passwordlength > 128); {
+  prompt("Password needs to be no longer than 128 characters");
 }
 
 
   }
+
   chooseFrom += Uppercase;
   chooseFrom += Lowercase;
   chooseFrom += special;
@@ -60,7 +61,7 @@ if (passwordlength < 8) {
   //Grab Ramdon Letters
   console.log (chooseFrom);
 
-  return "";
+  
 
 
 // Write password to the #password input
@@ -71,6 +72,7 @@ function writePassword() {
 
   passwordText.value = password;
 
+  return ""
 }
 
 // Add event listener to generate button
