@@ -2,74 +2,49 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  console.log ("Hey you did it")
- 
-  // User will be prompted for password criteria
-  var Uppercase = confirm("Would you like to use uppercase letters?");
-  var Lowercase = confirm("Would you like to use lowercase letters?");
-  var numbers = confirm("Would you like to include numbers?");
-  var specialChar = confirm("Would you like to include special characters?");
-  var characterLength = confirm("How long would you like the password to be?");
-
-  //User asked for character types to include in password
+  var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  var numbers = "0123456789";
   var letters = "abcdefghijklmnop";
   var Uppercase = letters.toUpperCase();
-  var Lowercase = letters.toLowerCase();
-  var numbers = "0123456789";
-  var specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
   var characterLength = 128;
-  var chooseFrom = ""
 
-  if (Uppercase) {
+  // YOUR CODE GOES HERE
+  var passwordlength = prompt("How many characters would you like your password to include?");
+  var isUppercase = confirm("Would you like to use uppercase?");
+  var isLowercase = confirm("Would you like to use uppercase?");
+  var isSpecial = confirm("Would you like to use a special character?");
+  var isNumber = confirm("Would you like to use number?");
+  var computerChoice = Math.floor(Math.random() * characterLength);
+
+
+  if (isUppercase) {
     // Use Uppercase letters
     console.log('Uppercase')
-    chooseFrom += Uppercase;
   }
 
-  if (Lowercase) {
+  if (isLowercase) {
     // Use Lowercase letters
-    console.log('Lowercase')
-    chooseFrom += Lowercase;
+    console.log('lowercase')
   }
 
-  if (numbers) {
-    // Use numbers letters
+  if (isSpecial) {
+    // Use Special characters
+    console.log('special')
+  }
+
+  if (isNumber) {
+    // Use Numbers
     console.log('numbers')
-    chooseFrom += numbers;
+
   }
 
-  if (specialChar) {
-    // Use specialChar letters
-    console.log('specialChar')
-    chooseFrom += specialChar;
-  }
-  
-for (var i = 0; i <= 128; i++) {
-  console.log ("This is the current value of i: " + i + ".");
+
+  return "";
 
 }
-
-
-//User prompted for length of password
-function prompts() {
-  characterLength = prompt ("How many characters would you like your password to include?");
-}
-
-
-
-
-
-//User answers all prompts password is generated and displayed
-
-
-  return "password";
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 
 // Write password to the #password input
+//do not have to do anything here
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -78,4 +53,6 @@ function writePassword() {
 
 }
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
