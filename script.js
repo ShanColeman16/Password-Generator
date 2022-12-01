@@ -27,7 +27,7 @@ function generatePassword() {
   if (isLowercase) {
     // Use Lowercase letters
     console.log('lowercase')
-    chooseFrom += lowercase;
+    chooseFrom += Lowercase;
   }
 
   if (isSpecial) {
@@ -36,14 +36,24 @@ function generatePassword() {
     chooseFrom += special;
   }
 
+
   if (isNumber) {
-    // Use Numbers
-    console.log('numbers')
-    chooseFrom += numbers;
+     // Use Numbers
+     console.log('numbers')
+     chooseFrom += numbers;
+    
+  }
+if (passwordlength < 8) {
+  prompt("Password needs to be at least 8 characters long")
+  
+} else (passwordlength > 128); {
+  prompt("Password needs to be no longer than 128 characters")
+}
+
 
   }
   chooseFrom += Uppercase;
-  chooseFrom += lowercase;
+  chooseFrom += Lowercase;
   chooseFrom += special;
   chooseFrom += numbers;
 
@@ -52,7 +62,6 @@ function generatePassword() {
 
   return "";
 
-}
 
 // Write password to the #password input
 //do not have to do anything here
