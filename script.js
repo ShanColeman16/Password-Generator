@@ -39,13 +39,7 @@ function generatePassword() {
   if (isNumber) {
     // Use Numbers
     console.log('numbers')
-
   }
-  for (var i = 0; i <= 128; i++) {
-    var special + Math.floor(Math.random() * characterLength);
-
-
-
 
 
 
