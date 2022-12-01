@@ -19,7 +19,7 @@ function generatePassword() {
 
     //Array
     var collection = ['Uppercase', 'Lowercase', 'Special', 'Number']
-    chooseFrom += special (Math.floor(Math.random() * characterLength));
+    
 
   if (isUppercase) {
     // Use Uppercase letters
@@ -32,16 +32,17 @@ function generatePassword() {
   }
 
   if (special) {
-    // Use Special characters
+    chooseFrom += special (Math.floor(Math.random() * characterLength));
     console.log('special')
   }
 
   if (isNumber) {
     // Use Numbers
     console.log('numbers')
-const numbers = Number(window.prompt("Type a number", ""));
-  }
 
+  }
+  for (var i = 0; i <= 128; i++) {
+    var special + Math.floor(Math.random() * characterLength);
 
 
 
